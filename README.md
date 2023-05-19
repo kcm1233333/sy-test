@@ -1,0 +1,6 @@
+--Login and Registration
+--Delete Product List in Shop Cart
+--Get Product List in Shop Cart
+--Insert into Shop Cart
+--Get Product List by Category
+--Insert into Transactions

@@ -1,0 +1,516 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0",
+    "title": "Synapsis Test API",
+    "contact": {}
+  },
+  "host": "149.129.219.173:5051",
+  "basePath": "/",
+  "securityDefinitions": {},
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/addcart": {
+      "post": {
+        "summary": "Add Cart",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "AddCart",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/AddCartRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/registration": {
+      "post": {
+        "summary": "Registration",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "Registration",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/RegistrationRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/deletecart": {
+      "post": {
+        "summary": "remove cart",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "removecart",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/removecartrequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/login": {
+      "post": {
+        "summary": "login",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "login",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/loginrequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/entryitems": {
+      "post": {
+        "summary": "entry items",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "entryitems",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/entryitemsrequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/category": {
+      "post": {
+        "summary": "Category",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "Category",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/CategoryRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/money": {
+      "post": {
+        "summary": "Money",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "Money",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/MoneyRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/payment": {
+      "post": {
+        "summary": "Transaction",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "Transaction",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/TransactionRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/shoplist": {
+      "post": {
+        "summary": "Shoplist",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "Shoplist",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ShoplistRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "AddCartRequest": {
+      "title": "AddCartRequest",
+      "example": {
+        "kodekeranjang": "839473928443",
+        "kodebarang": "39403",
+        "kodepengguna": "1239933"
+      },
+      "type": "object",
+      "properties": {
+        "kodekeranjang": {
+          "type": "string"
+        },
+        "kodebarang": {
+          "type": "string"
+        },
+        "kodepengguna": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "kodekeranjang",
+        "kodebarang",
+        "kodepengguna"
+      ]
+    },
+    "RegistrationRequest": {
+      "title": "RegistrationRequest",
+      "example": {
+        "kodepengguna": "1239933",
+        "namapengguna": "Smith",
+        "alamatpengguna": "Jogja",
+        "katasandi": "aDbDgfj9",
+        "kodeotp": "903454"
+      },
+      "type": "object",
+      "properties": {
+        "kodepengguna": {
+          "type": "string"
+        },
+        "namapengguna": {
+          "type": "string"
+        },
+        "alamatpengguna": {
+          "type": "string"
+        },
+        "katasandi": {
+          "type": "string"
+        },
+        "kodeotp": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "kodepengguna",
+        "namapengguna",
+        "alamatpengguna",
+        "katasandi",
+        "kodeotp"
+      ]
+    },
+    "removecartrequest": {
+      "title": "removecartrequest",
+      "example": {
+        "kodebarang": "456643"
+      },
+      "type": "object",
+      "properties": {
+        "kodebarang": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "kodebarang"
+      ]
+    },
+    "loginrequest": {
+      "title": "loginrequest",
+      "example": {
+        "kodepengguna": "1239933",
+        "katasandi": "aDbDgfj9"
+      },
+      "type": "object",
+      "properties": {
+        "kodepengguna": {
+          "type": "string"
+        },
+        "katasandi": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "kodepengguna",
+        "katasandi"
+      ]
+    },
+    "entryitemsrequest": {
+      "title": "entryitemsrequest",
+      "example": {
+        "kodebarang": "39403",
+        "namabarang": "Kulkas-Panasonic",
+        "kategoribarang": "Electro",
+        "hargabarang": 2500000
+      },
+      "type": "object",
+      "properties": {
+        "kodebarang": {
+          "type": "string"
+        },
+        "namabarang": {
+          "type": "string"
+        },
+        "kategoribarang": {
+          "type": "string"
+        },
+        "hargabarang": {
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "kodebarang",
+        "namabarang",
+        "kategoribarang",
+        "hargabarang"
+      ]
+    },
+    "CategoryRequest": {
+      "title": "CategoryRequest",
+      "example": {
+        "kategoribarang": "Electro"
+      },
+      "type": "object",
+      "properties": {
+        "kategoribarang": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "kategoribarang"
+      ]
+    },
+    "MoneyRequest": {
+      "title": "MoneyRequest",
+      "example": {
+        "kodebayar": "04857392048457",
+        "metodebayar": "Transfer",
+        "namapembayar": "Smith",
+        "namabank": "ABC Bank",
+        "nomorrek": "938492093"
+      },
+      "type": "object",
+      "properties": {
+        "kodebayar": {
+          "type": "string"
+        },
+        "metodebayar": {
+          "type": "string"
+        },
+        "namapembayar": {
+          "type": "string"
+        },
+        "namabank": {
+          "type": "string"
+        },
+        "nomorrek": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "kodebayar",
+        "metodebayar",
+        "namapembayar",
+        "namabank",
+        "nomorrek"
+      ]
+    },
+    "TransactionRequest": {
+      "title": "TransactionRequest",
+      "example": {
+        "kodetransaksi": "398475829300",
+        "kodekeranjang": "839473928443",
+        "kodebayar": "04857392048457"
+      },
+      "type": "object",
+      "properties": {
+        "kodetransaksi": {
+          "type": "string"
+        },
+        "kodekeranjang": {
+          "type": "string"
+        },
+        "kodebayar": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "kodetransaksi",
+        "kodekeranjang",
+        "kodebayar"
+      ]
+    },
+    "ShoplistRequest": {
+      "title": "ShoplistRequest",
+      "example": {
+        "kodepengguna": "1239933"
+      },
+      "type": "object",
+      "properties": {
+        "kodepengguna": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "kodepengguna"
+      ]
+    }
+  },
+  "tags": [
+    {
+      "name": "Misc",
+      "description": ""
+    }
+  ]
+}
